@@ -94,17 +94,21 @@ h2 {
 
 /* Events & Discount section */
 
-#discount {
-    display: flex;
-    justify-content: center;
+#events .table {
+    /* Adjusting events table font size that the table doesn't overflow on xs screens. 
+      Size set back to 1rem in a media query for sm screens and up */
+    font-size: 0.7rem;
 }
 
-#discount p {
+.student-discount {
     background-color: var(--highlight-color);
+    font-weight: bold;
     color: white;
-    padding: 7px 20px;
-    text-align: center;
-    display: inline-block;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 5px 10px;
+    font-size: 0.8rem;
 }
 
 /* Game library cards */
@@ -163,11 +167,11 @@ h2 {
 
 /* Media queries */
 
-/* Small devices (mobiles, 320px-425px) */
-@media screen and (max-width: 425px) {
-    /* Make table and discount text smaller to fit the screen */
-    #discount {
-        font-size: 0.70rem;
+/* Small screens and up */
+@media screen and (min-width: 576px) {
+    /* Increase font size in events table when screen size is large enough */
+    #events .table {
+        font-size: 1rem;
     }
 }
 
@@ -184,7 +188,11 @@ h2 {
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: auto;
-    }     
+    }
+
+    .students-discount {
+        font-size: 1rem;
+    }
 }
 
 /* xl devices (large desktops, 1200px and up) */
