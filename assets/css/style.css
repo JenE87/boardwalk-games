@@ -92,6 +92,21 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* Events & Discount section */
+
+#discount {
+    display: flex;
+    justify-content: center;
+}
+
+#discount p {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    display: inline-block;
+}
+
 /* Game library cards */
 #new-games .card,
 #fav-games .card {
@@ -147,6 +162,14 @@ h2 {
 }*/
 
 /* Media queries */
+
+/* Small devices (mobiles, 320px-425px) */
+@media screen and (max-width: 425px) {
+    /* Make table and discount text smaller to fit the screen */
+    #discount {
+        font-size: 0.70rem;
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
